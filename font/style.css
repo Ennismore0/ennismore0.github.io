@@ -67,6 +67,10 @@ main {
     font-weight: normal;
 }
 
+.development h3 {
+    font-size: 18px;
+}
+
 .development p {
     margin: 0 0 24px;
     color: #555555;
@@ -99,6 +103,101 @@ main {
     outline-offset: 4px;
 }
 
+.development-dropdowns {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 40px 0;
+    text-align: left;
+}
+
+.development-dropdown {
+    overflow: hidden;
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+    background: #FFFFFF;
+}
+
+.development-dropdown summary {
+    position: relative;
+    padding: 20px 52px 20px 22px;
+    color: #245BC5;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    transition: background-color 0.2s;
+}
+
+.development-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+.development-dropdown summary::after {
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    content: "+";
+    transform: translateY(-50%);
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.development-dropdown[open] summary::after {
+    content: "−";
+}
+
+.development-dropdown summary:hover {
+    background: #F3F7FF;
+}
+
+.development-dropdown summary:focus-visible {
+    outline: 3px solid #4B8DFE;
+    outline-offset: -3px;
+}
+
+.dropdown-content {
+    padding: 4px 22px 22px;
+    border-top: 1px solid #E5E7EB;
+}
+
+.dropdown-content p {
+    margin-bottom: 16px;
+}
+
+.dropdown-content p:last-child {
+    margin-bottom: 0;
+}
+
+.development-roles {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 16px;
+}
+
+.role-card {
+    padding: 18px;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    background: #FFFFFF;
+}
+
+.role-card h3 {
+    margin-top: 0;
+    color: #245BC5;
+    font-size: 16px;
+}
+
+.role-card p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.development-steps {
+    padding-left: 24px;
+    line-height: 1.9;
+}
+
 .site-footer {
     padding: 28px 16px;
     border-top: 1px solid #E5E7EB;
@@ -118,6 +217,24 @@ main {
 
 .site-footer a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+    .development-roles {
+        grid-template-columns: 1fr;
+    }
+
+    .development-dropdown summary {
+        padding: 18px 46px 18px 16px;
+    }
+
+    .development-dropdown summary::after {
+        right: 16px;
+    }
+
+    .dropdown-content {
+        padding: 4px 16px 18px;
+    }
 }
 
 @media (max-width: 600px) {
