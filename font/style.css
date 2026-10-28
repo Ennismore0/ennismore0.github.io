@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@font-face {
+    font-family: "Mojangles";
+    src: url("font/Mojangles.otf") format("opentype");
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #FFFFFF;
+    color: #222222;
+    font-family: "Inter", sans-serif;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    padding: 16px 28px;
+    background-color: #4B8DFE;
+    color: #FFFFFF;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.logo {
+    display: block;
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-family: "Mojangles", sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+}
+
+main {
+    min-height: calc(100vh - 160px);
+    padding: 28px;
+    background: #FFFFFF;
+}
+
+.development {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 24px;
+    text-align: center;
+}
+
+.development h2 {
+    margin: 0 0 24px;
+    font-family: "Mojangles", sans-serif;
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.development p {
+    margin: 0 0 24px;
+    color: #555555;
+    line-height: 1.7;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.15s, opacity 0.15s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.button-primary {
+    background: #4B8DFE;
+    color: #FFFFFF;
+}
+
+.button:focus-visible,
+.header-brand:focus-visible,
+.site-footer a:focus-visible {
+    outline: 3px solid #245BC5;
+    outline-offset: 4px;
+}
+
+.site-footer {
+    padding: 28px 16px;
+    border-top: 1px solid #E5E7EB;
+    color: #666666;
+    font-size: 14px;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 8px 0;
+}
+
+.site-footer a {
+    color: #245BC5;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        padding: 14px 18px;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .site-header h1 {
+        font-size: 30px;
+    }
+
+    main {
+        padding: 16px;
+    }
+
+    .development {
+        padding: 48px 8px;
+    }
+}
