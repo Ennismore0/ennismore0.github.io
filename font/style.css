@@ -258,4 +258,14 @@ main {
     .development {
         padding: 48px 8px;
     }
+
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 48px 24px;
+    }
 }
